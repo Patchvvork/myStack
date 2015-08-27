@@ -1,0 +1,14 @@
+# Opsworks attributes : tcp port, elasticsearch host
+
+input {
+	tcp {
+		port => <%= node["logstash-tcp-port"] %>
+	}
+}
+
+output {
+	stdout {
+		codec => rubydebug
+		host => <%= node["logstash-es-host"] %>
+	}
+}
