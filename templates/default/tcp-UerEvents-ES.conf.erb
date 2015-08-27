@@ -9,6 +9,6 @@ input {
 output {
 	stdout {
 		codec => rubydebug
-		host => <%= node["logstash-es-host"] %>
+		host => <%= node["es-host"] %>
 	}
 }
