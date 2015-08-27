@@ -1,4 +1,16 @@
 cluster.name: <%= node["cluster-name"] %>
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+
+#AWS plugin configuration
+
+cloud.aws.region: eu-central-1
+discovery.zen.ping.multicast.enabled: false
+discovery.type: ec2
+discovery.ec2.groups: "tuto ELK stack"
+cloud.aws.access_key: <%= node["access-key"] %>
+cloud.aws.secret_key: <%= node["secret-key"] %>
+#discovery.ec2.tag.Name: "elasticsearch-nodes"
 
 #################### Elasticsearch Configuration Example #####################
 
