@@ -13,7 +13,7 @@ end
 # Extract Kibana archive
 
 execute "Extract Kibana" do
-	command "tar xvf kibana-*.tar.gz"
+	command "tar xvf kibana-4.0.1-linux-x64.tar.gz"
 end
 
 # Modify Kibana yaml config file
