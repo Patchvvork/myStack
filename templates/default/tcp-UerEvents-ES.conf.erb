@@ -10,7 +10,7 @@ input {
 output {
 
 	elasticsearch {
-		host => "<%= node["es-host"] %>""
+		host => "<%= node["es-host"] %>"
 	}
 	stdout {
 		codec => rubydebug
