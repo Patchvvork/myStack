@@ -1,7 +1,13 @@
+#Go to home directory
+
+execute "Download Kibana" do
+	command "cd ~"
+end
+
 # Download Kibana 4 to home directory 
 
 execute "Download Kibana" do
-	command "cd ~; wget https://download.elasticsearch.org/kibana/kibana/kibana-4.0.1-linux-x64.tar.gz"
+	command "wget https://download.elasticsearch.org/kibana/kibana/kibana-4.0.1-linux-x64.tar.gz"
 end
 
 # Extract Kibana archive
