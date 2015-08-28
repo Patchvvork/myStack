@@ -17,6 +17,16 @@ cookbook_file "/etc/nginx/nginx.conf" do
 	mode "0644"
 end
 
+# Add Kibana conf file
 
+template "/etc/nginx/conf.d/kibana.conf" do
+	source "kibana.conf.erb"
+	mode "0644"
+end
 
+# Restart Ngix
+
+service "nginx" do
+	action :restart
+end
 
