@@ -1,3 +1,9 @@
+# Restart Ngix
+
+service "nginx" do
+	action :restart
+end
+
 # Start Kibana
 
 execute "Start Kibana" do

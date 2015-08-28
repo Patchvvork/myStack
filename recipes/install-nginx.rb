@@ -24,9 +24,4 @@ template "/etc/nginx/conf.d/kibana.conf" do
 	mode "0644"
 end
 
-# Restart Ngix
-
-service "nginx" do
-	action :restart
-end
 
