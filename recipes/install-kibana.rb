@@ -18,7 +18,7 @@ end
 
 # Modify Kibana yaml config file
 
-template "~/kibana-4*/config/kibana.yml" do
+template "~/kibana-4.0.1-linux-x64/config/kibana.yml" do
 	source "kibana.yml.erb"
 	mode "0644"
 end
