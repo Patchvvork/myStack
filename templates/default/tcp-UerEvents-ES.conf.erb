@@ -2,13 +2,17 @@
 
 input {
 	tcp {
+		type => "json"
 		port => <%= node["logstash-tcp-port"] %>
 	}
 }
 
 output {
+
+	elasticsearch {
+		host => <%= node["es-host"] %>
+	}
 	stdout {
 		codec => rubydebug
-		host => <%= node["es-host"] %>
 	}
 }
