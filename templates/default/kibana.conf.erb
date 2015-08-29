@@ -1,7 +1,7 @@
 server {
-    listen 80;
+    listen 8080;
 
-    server_name 54.93.84.113;
+    server_name "<%= node["server-name"] %>";
 
     location / {
         proxy_pass http://localhost:5601;
